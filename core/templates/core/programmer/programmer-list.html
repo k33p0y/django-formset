@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block css %}{% endblock %}
+
+{% block js %}{% endblock %}
+
+{% block content %}
+<h2>Programmer list:</h2>
+<a href="{% url 'programmer_create' %}"><small>Add new</small></a>
+<div>
+    <ul>
+        {% for programmer in programmers %}
+            <li>
+                {{programmer.name}} | <a href="{% url 'programmer_update' programmer_id=programmer.id%}">
+                    edit </a>
+                    <!-- <a href="">
+                        delete
+                    </a> -->
+            </li>
+        {% empty %}
+            <li>
+                No programmer yet. | <a href="">Add new</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

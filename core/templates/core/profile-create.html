@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block css %}{% endblock %}
+
+{% block js %}{% endblock %}
+
+{% block content %}
+<h2>Create Profile</h2>
+<form action="" method="post">
+    {% csrf_token %}
+    {{profile_form.as_p}}
+    <br><h5>Family Members:</h5>
+    {{family_member_form.as_p}}
+    <button type="submit">Save</button>
+</form>
+{% endblock %}

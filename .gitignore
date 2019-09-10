@@ -1,0 +1,9 @@
+.vscode
+__pycache__
+*.pyc
+venv/
+.env
+*.py.save
+*.py.save.[0-9]
+core/migrations/*.py
+!core/migrations/__init__.py
